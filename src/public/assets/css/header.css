@@ -1,0 +1,94 @@
+.cabecalho {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-fundo-cabecalho);
+}
+
+.limitador-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 95%;
+    height: 50px;
+}
+
+.cabecalho-navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+}
+
+.image-logo {
+    display: flex;
+    width: 35x;
+    height: 35px;
+}
+
+.image-logo img {
+    display: block;
+    width: 100%;
+}
+
+.nome-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 50px;
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 50px;
+}
+
+.mode p {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-weight: 400;
+}
+
+.mode-lampada {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--cor-white);
+    background-color: var(--cor-white);
+    /* cor do light mode */
+}
+
+.mode-lampada.ativo {
+    background-color: var(--cor-btn);
+    border: 1px solid var(--cor-btn-hover);
+}
+
+.mode-lampada::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--cor-btn-hover);
+    width: 25px;
+    height: 25px;
+    left: 4px;
+    top: 1px;
+    transition: .9s;
+}
+
+.mode-lampada.ativo::after {
+    left: 39px;
+    background-color: var(--cor-white);
+}

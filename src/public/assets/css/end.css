@@ -1,0 +1,165 @@
+.end-block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.porcent-total {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#porcent-arquetype-generic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    height: 70px;
+    border-radius: 4px;
+    background: linear-gradient(90deg,
+            var(--cor-fundo-cabecalho),
+            var(--cor-gray-gradient));
+    border: 1px solid linear-gradient(90deg, var(--cor-gray-gradient), var(--cor-fundo-cabecalho));
+    margin-bottom: 26px;
+}
+
+#porcent-arquetype-generic span {
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+#taxa-porcent-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#taxa-porcent-list span {
+    display: block;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(90deg,
+            var(--cor-fundo-cabecalho),
+            var(--cor-gray-gradient));
+    border: 1px solid var(--cor-fundo-cabecalho);
+    border-radius: 2px;
+    position: relative;
+}
+
+.main-porcent::before {
+    font-family: "inter";
+    content: "MAIN";
+    position: absolute;
+    text-align: center;
+    padding: 1px 0;
+    width: 50px;
+    font-size: 8px;
+    top: -12px;
+    left: -1px;
+    background: linear-gradient(90deg,
+            var(--cor-fundo-cabecalho),
+            var(--cor-gray-gradient));
+    border-left: 1px solid var(--cor-fundo-cabecalho);
+}
+
+.extra-porcent::before {
+    font-family: "inter";
+    content: "EXTRA";
+    position: absolute;
+    text-align: center;
+    padding: 1px 0;
+    width: 50px;
+    font-size: 8px;
+    top: -12px;
+    left: -1px;
+    background: linear-gradient(90deg,
+            var(--cor-fundo-cabecalho),
+            var(--cor-gray-gradient));
+    border-left: 1px solid var(--cor-fundo-cabecalho);
+}
+
+.side-porcent::before {
+    font-family: "inter";
+    content: "SIDE";
+    position: absolute;
+    text-align: center;
+    padding: 1px 0;
+    width: 50px;
+    font-size: 8px;
+    top: -12px;
+    left: -1px;
+    background: linear-gradient(90deg,
+            var(--cor-fundo-cabecalho),
+            var(--cor-gray-gradient));
+    border-left: 1px solid var(--cor-fundo-cabecalho);
+}
+
+.number-copy {
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+.box-plot-relation {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 25px;
+    width: 600px;
+    height: 450px;
+    margin: 10px 0;
+}
+
+.box-plot-relation div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cor-fundo-cabecalho);
+}
+
+.box-plot-relation div canvas {
+    width: 600px;
+    height: 210px;
+}
+
+.box-plot-relation div canvas {
+    width: 600px;
+    height: 210px;
+}
+
+.taxa-extra-porcent {
+    width: 100%;
+    margin: 10px 0 30px 0;
+}
+
+.porcent-box-extra {
+    display: grid;
+}
+
+.title-porcent-extra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    padding: 2px 10px;
+    background-color: var(--cor-fundo-cabecalho);
+}
+
+#porcent-taxa-extra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    height: 60px;
+    border: 1px solid var(--cor-fundo-cabecalho);
+    background: linear-gradient(90deg,
+            var(--cor-fundo-cabecalho),
+            var(--cor-gray-gradient));
+}
+
+#porcent-taxa-extra div {
+    padding: 0 30px;
+}

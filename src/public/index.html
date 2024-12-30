@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/d-icon-8.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <title>Deck Board</title> -->
+  </head>
+  <body>
+    <div class="cabecalho">
+      <header class="limitador-cabecalho">
+        <nav class="cabecalho-navegacao">
+          <a href="./index.html" class="image-logo">
+            <img src="./img/d-icon-64.svg" alt="logo D" />
+          </a>
+          <p class="nome-logo">Deck Board</p>
+        </nav>
+        <div class="mode" id="lampada">
+          <p>OFF</p>
+          <span class="mode-lampada"></span>
+        </div>
+      </header>
+    </div>
+
+    <div class="corpo-dados">
+      <main class="grade-servicos">
+        <section class="init">
+          <h1>Decklist</h1>
+          <span class="decklist">
+            <div class="main-deck">
+              <!-- 
+              proper format of the html returned by Javascript
+              <a href="link/online/card.yugioh.database">
+                if the image is not used
+                : http://127.0.0.1:8080/src/public/index.html
+                <img src="./img/game-img/1.jpg" alt="">
+              </a> -->
+              <!-- <a href="http://127.0.0.1:5500/src/public/index.html">
+                <img src="./img/game-img/1.jpg" alt="" />
+              </a> -->
+            </div>
+            <div class="extra-deck"></div>
+            <div class="side-deck"></div>
+          </span>
+          <h2 class="qtd-deck">Quantitativos</h2>
+          <div class="grafico-decklist">
+            <canvas id="canvas-pizza-init"></canvas>
+          </div>
+        </section>
+
+        <div class="box-center">
+          <form
+            action="http://localhost:8000/decklist"
+            method="get"
+            id="input-form-ydke"
+          >
+            <div class="box-form-ydke">
+              <input type="text" name="ydke" id="input-cod-ydke" />
+              <button type="submit" id="btn-enviar">Enviar</button>
+            </div>
+          </form>
+          <div id="name-arquetype">
+            <p class="name">. . .</p>
+          </div>
+          <span class="box-grid-total-cards">
+            <h3>Total de Cartas</h3>
+            <div class="grid-values-deck">
+              <span class="box-values">
+                <div class="box-title">
+                  <p>ARQUETIPO</p>
+                </div>
+                <span id="box-value-cards-arquetype"></span>
+              </span>
+              <span class="box-values">
+                <div class="box-title">
+                  <p>GENERICAS</p>
+                </div>
+                <span id="box-value-cards-generic"></span>
+              </span>
+              <span class="box-values">
+                <div class="box-title">
+                  <p>DECK</p>
+                </div>
+                <span id="box-value-cards-deck"></span>
+              </span>
+              <span class="box-values">
+                <div class="box-title">
+                  <p>MAIN</p>
+                </div>
+                <span id="box-value-cards-main"></span>
+              </span>
+              <span class="box-values">
+                <div class="box-title">
+                  <p>EXTRA</p>
+                </div>
+                <span id="box-value-cards-extra"></span>
+              </span>
+              <span class="box-values">
+                <div class="box-title">
+                  <p>SIDE</p>
+                </div>
+                <span id="box-value-cards-side"></span>
+              </span>
+            </div>
+          </span>
+          <h4 class="title-card-invalid">Cartas Invalidas</h4>
+          <div id="invalid-cards"></div>
+          <span id="box-validation">
+            <p>SEU DECK ESTA: ...</p>
+          </span>
+          <div id="envios">
+            <button type="submit">BAIXAR DADOS</button>
+            <button type="submit">ENVIAR DADOS</button>
+          </div>
+        </div>
+        <span class="end-block">
+          <h5 class="porcent-total">% Total</h5>
+          <div id="porcent-arquetype-generic">
+            <span>
+              <p id="arquetype-gradient-porcent">ARQUETIPO :</p>
+            </span>
+            <span>
+              <p id="generic-gradient-porcent">: GENERICAS</p>
+            </span>
+          </div>
+          <div id="taxa-porcent-list">
+            <span class="main-porcent"></span>
+            <span class="extra-porcent"></span>
+            <span class="side-porcent"></span>
+          </div>
+          <h6 class="number-copy">Numero de Copias</h6>
+          <span class="box-plot-relation">
+            <div class="box-plot-number-copy-main">
+              <canvas id="plot-number-copy-main"></canvas>
+            </div>
+            <div class="box-plot-number-copy-side">
+              <canvas id="plot-number-copy-side"></canvas>
+            </div>
+          </span>
+          <h1 class="taxa-extra-porcent">Taxa de % no Extra</h1>
+          <div class="porcent-box-extra">
+            <div class="title-porcent-extra">
+              <span>ARQUETIPO</span>
+              <span>EXTRA</span>
+              <span>GENERICO</span>
+            </div>
+            <span id="porcent-taxa-extra">
+              <div class="arquetype-taxa">0%</div>
+              <div class="generic-taxa">0%</div>
+            </span>
+          </div>
+        </span>
+      </main>
+    </div>
+    <script src="./assets/js/header-script-html.js"></script>
+    <script src="./assets/js/init-script-html.js"></script>
+    <script src="./assets/js/center-script-html.js"></script>
+    <script src="./assets/js/end-script-html.js"></script>
+
+    <script>
+      document
+        .getElementById("input-form-ydke")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const input = document.getElementById("input-cod-ydke").value.trim();
+          const url = `http://localhost:8000/decklist?ydke=${encodeURIComponent(input)}`;
+
+          try {
+            const response = await fetch(url, { method: "GET" });
+
+            if (response.ok) {
+              const data = await response.json();
+              console.log(JSON.stringify(data, null, 2));
+            } else {
+              console.log(`Erro: ${response.statusText}`);
+            }
+          } catch (error) {
+            document.getElementById(
+              "response-container"
+            ).innerText = `Erro na requisição: ${error.message}`;
+          }
+        });
+    </script>
+  </body>
+</html>
