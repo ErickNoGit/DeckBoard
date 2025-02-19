@@ -201,3 +201,13 @@ document.addEventListener("deckReady", (event) => {
         });
     }
 });
+
+
+document.addEventListener("deckReady", () => {
+    const data = window.deck;
+    const numCopy = new Object(data.number_copy_cards);
+
+    const canvas = document.getElementById("canvas-pizza-init");
+    const ctx = canvas.getContext("2d");
+
+});

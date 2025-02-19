@@ -17,6 +17,9 @@
     --cor-btn-hover: #5cb4fc;
     --cor-black-gradient: #2c2c2c;
     --cor-gray-gradient: #5c5c5c;
+    --cor-blue: #5cb4fc;
+    --cor-green: rgb(76, 234, 76);
+    --cor-purple: #884fd6;
 }
 
 :root.ativo {
@@ -30,6 +33,9 @@
     --cor-btn: #39A2F9;
     --cor-black-gradient: #6a6a6a;
     --cor-gray-gradient: #fbfbfb;
+    --cor-blue: #3891db;
+    --cor-purple: #6327b8;
+
 }
 
 a {
@@ -44,7 +50,7 @@ body {
     font-family: 'Manrope', Helvetica, sans-serif;
     color: var(--cor-texto);
     background-color: var(--cor-fundo);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 button {
